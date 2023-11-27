@@ -31,26 +31,31 @@ public class Building {
         listOfSensors.add(sensor);
     }
 
-    public void removeSensor(String sensorName){
-
+    public void removeSensor(Sensor sensor){
+        listOfSensors.remove(sensor);
     }
 
-    public void addActuator(String actuatorName){
-
+    public void addActuator(Actuator actuator){
+        listOfActuator.add(actuator);
     }
 
-    public void removeActuator(String actuatorName){
-
+    public void removeActuator(Actuator actuator){
+        listOfActuator.remove(actuator);
     }
     public ArrayList getSensorList(){
         return listOfSensors;
     }
 
-    public void printSensor(){
-       for (int i = 0; i < listOfSensors.size(); i++) {
-           System.out.println(listOfSensors.get(i));
+    public ArrayList getActuatorList(){
+        return listOfActuator;
+    }
+
+    public void printList(ArrayList listToPrint){
+       for (int i = 0; i < listToPrint.size(); i++) {
+           System.out.println(listToPrint.get(i));
 
        }
+
     }
 }
 
