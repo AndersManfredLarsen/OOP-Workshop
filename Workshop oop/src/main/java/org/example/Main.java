@@ -4,16 +4,15 @@ package org.example;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+    Building building1 = new Building("The White House", 7, 15.7f,0.07f);
+    TempSensor tempSensor1 = new TempSensor(24.7f);
+    TempSensor tempSensor2 = new TempSensor(28.9f);
+    building1.addSensor(tempSensor1);
+    building1.addSensor(tempSensor2);
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+    System.out.println(tempSensor1.GetValue());
+    building1.printSensor();
+
     }
 }
