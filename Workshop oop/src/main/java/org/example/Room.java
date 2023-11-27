@@ -6,6 +6,8 @@ public class Room extends Building{
     private float temp;
     private float CO2;
 
+    private TempSensor roomTemp;
+
 
     public Room(String name, int rooms, float temp, float CO2){
         this.name = name;
@@ -13,16 +15,15 @@ public class Room extends Building{
         this.CO2 = CO2;
     }
 
-    public float getTemp(){
-        return temp;
-    }
+
     public void setTemp(float newTemp){
-     this.temp =  newTemp;
+     roomTemp.SetValue(newTemp);
     }
 
-    public float getCO2(){
-        return  CO2;
+    public void setRoomTemp(TempSensor tempSensor){
+        this.roomTemp = tempSensor;
     }
+
 
     public void setCO2(float newCO2){
         this.CO2 = newCO2;
