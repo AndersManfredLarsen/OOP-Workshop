@@ -20,4 +20,10 @@ public class TempSensor extends Sensor
     {
         return this.temp;
     }
+
+    @Override
+    public String toString()
+    {
+        return new String("TempSensor");
+    }
 }
