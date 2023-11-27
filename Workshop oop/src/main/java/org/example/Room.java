@@ -1,11 +1,14 @@
 package org.example;
 
 public class Room extends Building{
+
+    private String name;
     private float temp;
     private float CO2;
 
 
-    public Room(float temp, float CO2){
+    public Room(String name, int rooms, float temp, float CO2){
+        this.name = name;
         this.temp = temp;
         this.CO2 = CO2;
     }
